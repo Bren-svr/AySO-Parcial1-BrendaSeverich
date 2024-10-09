@@ -1,0 +1,203 @@
+https://docs.google.com/document/d/1H_ZHAkLNtvXZ6gtD40X7g-g0w5JZdyA4LcdZtqbeV7Q/edit?usp=sharing 
+
+Hola , buenas noches ! 
+Mil disculpas por la hora  , escribo para dar aviso que no pude hacer conexión con el git hub y la pc de virtual box, en un momento lo logre , pero desp no se que hice q lo desvincule, 
+probé con el token , y preguntando a chat gpt pero no lo pude corregir . 
+Cuando tengamos la clase , me saco la duda . 
+pero a por lsi acaso dejo los comandos que fui copiando mientras lo hacia y las imágenes de algunos puntos que no me generaron la información 
+De ser necesario voy a dar el recuperatorio . 
+Desde ya muchas gracias  
+
+
+Punto A
+
+sudo mkdir -p Examenes-UTN/{profesores,alumno_{1..3}/parcial_{1..3}}
+tree/Examen-UTN
+
+cd Examenes-UTN 
+
+Ingresar 
+
+cd /c 
+cd AySO
+mkdir Parcial1
+ll
+git init
+cat > PuntoA.sh
+cat > PuntoB.sh
+cat > PuntoC.sh
+cat > PuntoD.sh
+cat > PuntoE.sh
+cat > PuntoF.sh
+
+git commit -m "Estructura del examen" 
+
+git commit -m 'Puntoa'
+
+----------------------------------------------------------------
+
+Punto B 
+
+sudo fdisk /dev/sdc
+
+lsblk
+vagrant@VMExamen:~$ lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0   64M  1 loop /snap/core20/2379
+loop1    7:1    0   87M  1 loop /snap/lxd/29351
+loop2    7:2    0 38.8M  1 loop /snap/snapd/21759
+sda      8:0    0   40G  0 disk
+└─sda1   8:1    0   40G  0 part /
+sdb      8:16   0   10M  0 disk
+sdc      8:32   0   10G  0 disk
+├─sdc1   8:33   0    1G  0 part
+├─sdc2   8:34   0    1G  0 part
+├─sdc3   8:35   0    1G  0 part
+└─sdc4   8:36   0    1K  0 part
+sdd      8:48   0    2G  0 disk
+
+   61  vim PuntoB.sh
+   62  cdddd
+   63  cd ..
+   64  mkfs.ext4/dev/scd1
+   65  mkdir /mnt/sdc1
+   66  sudo mkdir /mnt/sdc1
+   67  ll /mnt
+   68  sudo mount /dev/sdc1 /mnt/sdc1
+   69  sudo mkfs.ext4 /dev/sdc1
+   70  sudo mount /dev/sdc1 /mnt/sdc1
+   71  ll /mnt/sdc1
+   72  sudo mkdir /mnt/sdc2
+   73  ll /mnt
+   74  sudo mkfs.ext4 /dev/sdc2
+   75  sudo mount /dev/sdc1 /mnt/sdc2
+   76  ll /mnt/sdc2
+   77  ll
+   78  ll /mnt
+   79  man mkfs
+   80  lsblk
+   81  sudo mkdir /mnt/sdc3
+   82  ll /mnt
+   83  udo mkfs.ext4 /dev/sdc3
+   84  sudo mount /dev/sdc1 /mnt/sdc3
+   85  ll /mnt/sdc1
+   86  ll /mnt/sdc3
+   87  sudo mount /dev/sdc3
+   88  sudo mkdir /mnt/sdc4
+   89  ll /mnt
+   90  sudo mkfs.ext4 /dev/sdc4
+   91  sudo mount /dev/sdc4 /mnt/sdc4
+   92  ll /mnt/sdc4
+   93  ll /mnt
+   94  history
+
+Crear un directorio para sdc 
+
+sudo mkdir /mnt/sdc1
+
+ll /mnt (ver si se creo) 
+
+sudo mkfs.ext4 /dev/sdc1 Para el formato
+
+sudo mount /dev/sdc4 /mnt/sdc4 craerlo 
+ll /mnt/sdc1
+-------------------------------------------
+
+Desmontarlo  
+sudo umoun /mnt/sdc1
+---------------------
+mkfs.ext4/dev/scd1 (para formatear)
+
+----------------------------------------
+
+Punto C 
+
+sudo useradd developer
+
+cat /etc/passwd    ( ver si existe)
+
+Crear grupo : 
+sudo  groupadd grupoDevops
+cat /etc/group ( ver si existe)
+
+id developer
+
+sudo usermod -aG grupoDevops developer 
+
+   95  sudo useradd
+   96  sudo useradd developer
+   97  cat /etc/passwd
+   98  sudo  groupadd grupoDevops
+   99  cat /etc/group
+  100  id developer
+  101  sudo usermod -ag grupoDevops developer
+  102  sudo usermod -aG grupoDevops developer
+
+ 104  sudo useradd tester
+  105  sudo useradd grupodiseño
+  106  cat /etc/group
+  107  sudo usermod -ag grupodiseño tester
+  108  sudo usermod -aG grupodiseño tester
+  109  id tester
+  110  history
+
+para dar los permisos 
+
+sudo chmod -R 750 /pruebas1/Examenes-UTN/alumno_1
+
+sudo chmod -R 760 /Examenes-UTN /alumno_2
+
+sudo chmod -R 700 /Examenes-UTN /alumno_3
+
+sudo chmod -R 775 /Examenes-UTN/profesores
+
+whoami > Examenes-UTN/alumno_1/validar.txt
+--------------------------------------------------------------------------
+
+puntoD
+sudo apt install tree
+sudo apt update
+mkdir -p $HOME/Estructura_Asimetrica/{{correo,cliente}/cartas_{1..100}/carteros_{1..10}
+
+tree Examenes-UTN/
+
+-------------------------------------------------------------------
+
+Punto E
+
+cat /proc/meminfo  (memoria )
+
+grep MemTotal /proc/meminfo 
+
+MemTotal:        2010892 kB
+
+grep MemTotal /proc/meminfo > filtrobasico.txt (lo guardo)
+
+cat filtrobasico.txt (consulta si quedo) 
+
+Chasis :: 
+sudo dmidecode  -t chassis (consulta info chasis) 
+
+sudo dmidecode -t chassis │grep Manufacturer (no lo toma)
+
+sudo dmidecode -t chassis │grep Manufacturer >> filtrobasico.txt
+cat filtrobasico.txt 
+
+(pegue todo , no solo Manufacturer)) 
+
+
+
+
+----------------------------------------------------------------------------
+Punto F 
+
+curl -s ifconfig.me (ip publica de la pc )
+186.132.41.210vagrant@VMExamen:~$ 
+whoami 
+sudo cat /etc/shadow 
+
+sudo cat /etc/shadow │grep vagrant (no funciono )
+
+sudo cat /etc/shadow │grep vagrant │awk -F ':' '{print $2}' (no funciono ) 
+
+
