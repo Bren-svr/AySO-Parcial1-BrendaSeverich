@@ -1,0 +1,5 @@
+sudo apt install tree
+sudo apt update
+mkdir -p $HOME/Estructura_Asimetrica/{{correo,cliente}/cartas_{1..100}/carteros_{1..10}
+
+tree Examenes-UTN/

@@ -1,0 +1,21 @@
+Punto E
+
+cat /proc/meminfo  (memoria )
+
+grep MemTotal /proc/meminfo 
+
+MemTotal:        2010892 kB
+
+grep MemTotal /proc/meminfo > filtrobasico.txt (lo guardo)
+
+cat filtrobasico.txt (consulta si quedo) 
+
+Chasis :: 
+sudo dmidecode  -t chassis (consulta info chasis) 
+
+sudo dmidecode -t chassis │grep Manufacturer (no lo toma)
+
+sudo dmidecode -t chassis │grep Manufacturer >> filtrobasico.txt
+cat filtrobasico.txt 
+
+(pegue todo , no solo Manufacturer)) 

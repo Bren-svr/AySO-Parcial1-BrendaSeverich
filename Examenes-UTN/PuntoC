@@ -1,0 +1,40 @@
+sudo useradd developer
+
+cat /etc/passwd    ( ver si existe)
+
+Crear grupo : 
+sudo  groupadd grupoDevops
+cat /etc/group ( ver si existe)
+
+id developer
+
+sudo usermod -aG grupoDevops developer 
+
+   95  sudo useradd
+   96  sudo useradd developer
+   97  cat /etc/passwd
+   98  sudo  groupadd grupoDevops
+   99  cat /etc/group
+  100  id developer
+  101  sudo usermod -ag grupoDevops developer
+  102  sudo usermod -aG grupoDevops developer
+
+ 104  sudo useradd tester
+  105  sudo useradd grupodiseño
+  106  cat /etc/group
+  107  sudo usermod -ag grupodiseño tester
+  108  sudo usermod -aG grupodiseño tester
+  109  id tester
+  110  history
+
+para dar los permisos 
+
+sudo chmod -R 750 /pruebas1/Examenes-UTN/alumno_1
+
+sudo chmod -R 760 /Examenes-UTN /alumno_2
+
+sudo chmod -R 700 /Examenes-UTN /alumno_3
+
+sudo chmod -R 775 /Examenes-UTN/profesores
+
+whoami > Examenes-UTN/alumno_1/validar.txt

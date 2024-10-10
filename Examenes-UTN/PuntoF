@@ -1,0 +1,10 @@
+Punto F 
+
+curl -s ifconfig.me (ip publica de la pc )
+186.132.41.210vagrant@VMExamen:~$ 
+whoami 
+sudo cat /etc/shadow 
+
+sudo cat /etc/shadow │grep vagrant (no funciono )
+
+sudo cat /etc/shadow │grep vagrant │awk -F ':' '{print $2}' (no funciono ) 
